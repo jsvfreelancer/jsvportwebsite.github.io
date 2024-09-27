@@ -1,10 +1,5 @@
 @import url(fontawesome-all.min.css);
 
-/*
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -2603,6 +2598,17 @@ input, select, textarea {
 				width: 100%;
 			}
 
+		.imageme.fit {
+			display: block;
+			margin: 0 0 2em 0;
+			width: 40%;
+		}
+	
+			.imageme.fit img {
+				width: 40%;
+			}
+		
+
 		.image.main {
 			display: block;
 			margin: 0 0 3em 0;
@@ -3907,3 +3913,55 @@ input, select, textarea {
 			}
 
 		}
+	
+/* Thumbnail 
+	body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}*/
+
+/*.thumbnail-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}*/
+
+.thumbnail-gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columns */
+    grid-template-rows: repeat(4, auto); /* 4 rows */
+    gap: 60px; /* Adjust the spacing between thumbnails */
+}
+
+.thumbnail {
+    border: 1px solid #ddd;
+    padding: 5px;
+    width: 150px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail a {
+    text-decoration: none;
+}
